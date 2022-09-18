@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>E-Banking Solution</title>
+	<style>
+	body{
+	height:540px;
+	background: radial-gradient(circle, rgba(238,174,202,1) 13%, rgba(148,187,233,1) 97%);
+	}
+
+	#main{
+	width:450px;
+	height:450px;
+	background:black;
+	opacity:2;
+	border:1px solid red;
+	margin:auto;
+	margin-top:50px;
+	}
+	
+	#main h1{
+	text-align:center;
+	color:gray;
+	}
+	
+	#main h1:hover{
+	color:white;
+	}
+	.mybtn{
+	margin-top:10px;
+	background-color:hotpink;
+	border:2px solid white;
+	color:white;
+	text-align:center;
+	font-size:20px;
+	width:350px;
+	cursor:pointer;
+	height:40px;
+	border-radius: 15px;
+	}
+	.mybtn:hover{
+	background-color:pink;
+	color:red;
+	}
+	.ab{
+	text-align:center;
+	font-size:50px;
+	color:gray;
+	}
+	.ab:hover{
+	color:pink;
+	}
+	b{
+	color:green
+	}
+	b:hover{
+	color:hotpink;
+	}
+	
+	</style>
+</head>
+<body>
+<h1 class="ab"><b>WELCOME TO</b> E-Banking Solution</h1>
+<hr>
+<div id="main">
+<h1> E-Banking Solution</h1>
+<hr>
+{% if msg %}
+<p  style="text-align:center;color:white">{{msg}}</p>
+{% endif %}
+<table style="margin:0 auto; width:80%">
+<tr>
+	<td>
+		<button class="mybtn" onclick="window.location.href='{% url "createaccount"%}'">Create Account</button>
+	</td>
+</tr>
+<tr>
+	<td>
+		<button class="mybtn" onclick="window.location.href='{% url "login"%}'">Deposit Amount</button>
+	</td>
+</tr>
+<tr>
+	<td>
+		<button class="mybtn" onclick="window.location.href='{% url "login"%}'">Withdraw Amount</button>
+	</td>
+</tr>
+<tr>
+	<td>
+		<button class="mybtn" onclick="window.location.href='{% url "login"%}'">Fund transfer</button>
+	</td>
+</tr>
+<tr>
+	<td>
+		<button class="mybtn" onclick="window.location.href='{% url "login"%}'">Balance Enquiry</button>
+	</td>
+</tr>
+</table>
+<?div>
+
+</body>
+</html>

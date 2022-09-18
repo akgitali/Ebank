@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Createaccount</title>
+		<style>
+	body{
+	height:540px;
+	background: radial-gradient(circle, rgba(238,174,202,1) 13%, rgba(148,187,233,1) 97%);
+	}
+
+	#main{
+	width:450px;
+	height:300px;
+	background:black;
+	opacity:2;
+	border:1px solid red;
+	margin:auto;
+	margin-top:180px;
+	}
+	
+	#main h1{
+	text-align:center;
+	color:gray;
+	}
+	
+	#main h1:hover{
+	color:white;
+	}
+	input{
+	margin-left:40px;
+	margin-top:10px;
+	background-color:hotpink;
+	border:2px solid white;
+	color:white;
+	text-align:center;
+	font-size:20px;
+	width:350px;
+	cursor:pointer;
+	height:40px;
+	border-radius: 15px;
+	}
+	input:hover{
+	background:pink;
+	color:red;
+	}
+	.b{
+	width:360px;
+	}
+	</style>
+</head>
+<body>
+<div id="main">
+<h1>Deposit Amount </h1>
+<hr>
+	{% if msg %}
+		<p style="text-align:center;color:white">{{msg}}</p>
+	{% endif %}
+	<form action="{% url 'depositamt' %}" method="post">
+	{% csrf_token %}
+	<table>
+		<tr>
+			<td><input type="number" name="amt" placeholder="Deposit Amount ...."/></td>
+		</tr>
+		
+		<tr>
+			
+			<td>
+			<input class="b" type="submit" value="Deposit"/>
+			</td>
+		</tr>
+	</table>
+	</form>
+</div>
+</body>
+</html>
